@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category_m2m">
+    <sys_properties_category_m2m action="INSERT_OR_UPDATE">
+        <category display_value="Task Poll Settings">00924a3c879bd6508b4c31930cbb3524</category>
+        <order>310</order>
+        <property display_value="tpoll_incident_task_assignment_condition" name="tpoll_incident_task_assignment_condition">ee91cdf6c3d752103491db0d0501314e</property>
+        <sys_class_name>sys_properties_category_m2m</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-28 07:53:37</sys_created_on>
+        <sys_id>6ac145f6c3d752103491db0d0501318d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>tpoll_incident_task_assignment_condition.Task Poll Settings</sys_name>
+        <sys_package display_value="Task Poll - ACLs" source="5eac3cf6c39752103491db0d0501316f">5eac3cf6c39752103491db0d0501316f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Task Poll - ACLs">5eac3cf6c39752103491db0d0501316f</sys_scope>
+        <sys_update_name>sys_properties_category_m2m_6ac145f6c3d752103491db0d0501318d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-28 07:53:41</sys_updated_on>
+    </sys_properties_category_m2m>
+</record_update>
