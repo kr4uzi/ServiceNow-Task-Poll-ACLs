@@ -6,7 +6,7 @@
         <applies_to/>
         <condition/>
         <decision_type>allow</decision_type>
-        <description/>
+        <description>see row-level ACL description</description>
         <local_or_existing>Local</local_or_existing>
         <name>discovery_credentials.*</name>
         <operation display_value="read">read</operation>
@@ -16,14 +16,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-02-04 15:48:04</sys_created_on>
         <sys_id>a881bac9c3e312103491db0d05013112</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>discovery_credentials.*</sys_name>
         <sys_package display_value="Task Poll - Provider ACLs" source="5eac3cf6c39752103491db0d0501316f">5eac3cf6c39752103491db0d0501316f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Task Poll - Provider ACLs">5eac3cf6c39752103491db0d0501316f</sys_scope>
         <sys_update_name>sys_security_acl_a881bac9c3e312103491db0d05013112</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-02-04 15:48:04</sys_updated_on>
+        <sys_updated_by>kr4uzi@gmail.com</sys_updated_by>
+        <sys_updated_on>2025-02-10 19:39:34</sys_updated_on>
         <type display_value="record">record</type>
     </sys_security_acl>
 </record_update>

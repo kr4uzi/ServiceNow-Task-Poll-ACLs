@@ -4,7 +4,7 @@
         <access>package_private</access>
         <action_delete>false</action_delete>
         <action_insert>false</action_insert>
-        <action_query>false</action_query>
+        <action_query>true</action_query>
         <action_update>false</action_update>
         <active>true</active>
         <add_message>false</add_message>
@@ -26,13 +26,18 @@
         <rest_service/>
         <rest_service_text/>
         <rest_variables/>
-        <role_conditions>tpoll_incident_user</role_conditions>
+        <role_conditions>x_376096_tpoll.user</role_conditions>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	var cond = null;
+	var incAssignment = gs.getProperty('tpoll_incident_assignment_condition');
+	if (incAssignment) {
+		cond = current.addEncodedQuery(incAssignment);
+	}
 
 	var incTaskGr = new GlideRecordSecure('incident_task');
 	incTaskGr.query(); // the query BR for incident_task will add necessary filters
 
-	var cond = null;
 	while (incTaskGr.next()) {
 		if (cond) {
 			cond.addOrCondition('sys_id', incTaskGr.incident);
@@ -48,15 +53,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>6944813ec3d752103491db0d05013124</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Task Poll ACLs  - Filter Incidents</sys_name>
         <sys_overrides/>
-        <sys_package display_value="Task Poll - ACLs" source="5eac3cf6c39752103491db0d0501316f">5eac3cf6c39752103491db0d0501316f</sys_package>
+        <sys_package display_value="Task Poll - Provider ACLs" source="5eac3cf6c39752103491db0d0501316f">5eac3cf6c39752103491db0d0501316f</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Task Poll - ACLs">5eac3cf6c39752103491db0d0501316f</sys_scope>
+        <sys_scope display_value="Task Poll - Provider ACLs">5eac3cf6c39752103491db0d0501316f</sys_scope>
         <sys_update_name>sys_script_6944813ec3d752103491db0d05013124</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-28 08:05:40</sys_updated_on>
+        <sys_updated_by>kr4uzi@gmail.com</sys_updated_by>
+        <sys_updated_on>2025-02-10 19:23:03</sys_updated_on>
         <template/>
         <when>before</when>
     </sys_script>

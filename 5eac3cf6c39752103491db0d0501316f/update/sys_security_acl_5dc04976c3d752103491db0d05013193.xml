@@ -6,7 +6,7 @@
         <applies_to/>
         <condition/>
         <decision_type>allow</decision_type>
-        <description/>
+        <description>Allows the task poll user to read fields in the incident if read access on the incident is granted and the field is part of the readable-fields</description>
         <local_or_existing>Local</local_or_existing>
         <name>incident.*</name>
         <operation display_value="read">read</operation>
@@ -16,14 +16,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-01-28 07:50:46</sys_created_on>
         <sys_id>5dc04976c3d752103491db0d05013193</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>incident.*</sys_name>
-        <sys_package display_value="Task Poll - ACLs" source="5eac3cf6c39752103491db0d0501316f">5eac3cf6c39752103491db0d0501316f</sys_package>
+        <sys_package display_value="Task Poll - Provider ACLs" source="5eac3cf6c39752103491db0d0501316f">5eac3cf6c39752103491db0d0501316f</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Task Poll - ACLs">5eac3cf6c39752103491db0d0501316f</sys_scope>
+        <sys_scope display_value="Task Poll - Provider ACLs">5eac3cf6c39752103491db0d0501316f</sys_scope>
         <sys_update_name>sys_security_acl_5dc04976c3d752103491db0d05013193</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-28 07:50:46</sys_updated_on>
+        <sys_updated_by>kr4uzi@gmail.com</sys_updated_by>
+        <sys_updated_on>2025-02-10 19:47:49</sys_updated_on>
         <type display_value="record">record</type>
     </sys_security_acl>
     <sys_es_latest_script action="INSERT_OR_UPDATE">
