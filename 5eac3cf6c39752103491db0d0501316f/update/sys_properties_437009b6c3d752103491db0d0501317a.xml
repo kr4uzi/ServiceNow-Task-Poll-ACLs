@@ -11,16 +11,16 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-01-28 07:49:04</sys_created_on>
         <sys_id>437009b6c3d752103491db0d0501317a</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>tpoll_incident_fields</sys_name>
-        <sys_package display_value="Task Poll - ACLs" source="5eac3cf6c39752103491db0d0501316f">5eac3cf6c39752103491db0d0501316f</sys_package>
+        <sys_package display_value="Task Poll - Provider ACLs" source="5eac3cf6c39752103491db0d0501316f">5eac3cf6c39752103491db0d0501316f</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Task Poll - ACLs">5eac3cf6c39752103491db0d0501316f</sys_scope>
+        <sys_scope display_value="Task Poll - Provider ACLs">5eac3cf6c39752103491db0d0501316f</sys_scope>
         <sys_update_name>sys_properties_437009b6c3d752103491db0d0501317a</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-28 07:49:04</sys_updated_on>
+        <sys_updated_on>2025-01-28 08:26:16</sys_updated_on>
         <type>string</type>
-        <value>caller_id,state,short_description,description,priority,urgency,impact,comments</value>
+        <value>caller_id,state,short_description,description,priority,urgency,impact,comments,work_notes</value>
         <write_roles>security_admin</write_roles>
     </sys_properties>
     <sys_translated_text action="delete_multiple" query="documentkey=437009b6c3d752103491db0d0501317a"/>
