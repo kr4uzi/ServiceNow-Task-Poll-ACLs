@@ -35,31 +35,26 @@
         <role_conditions>x_376096_tpoll.user</role_conditions>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
 
-	var userQuery = current.getEncodedQuery();
+	var incTasks = [];
 	var incTaskGr = new GlideRecordSecure('incident_task');
 	incTaskGr.query(); // the query BR for incident_task will add necessary filters
-
-	var cond = null;
 	while (incTaskGr.next()) {
-		if (cond) {
-			cond.addOrCondition('sys_id', incTaskGr.incident);
-		} else {
-			cond = current.addQuery('sys_id', incTaskGr.incident);
-		}
+		incTasks.push(incTaskGr.getValue('incident'));
+	}
+
+	var conds = [];
+	if (incTasks.length) {
+		conds.push('sys_idIN' + incTasks.join(','));
 	}
 
 	var incAssignment = gs.getProperty('tpoll_incident_assignment_condition');
 	if (incAssignment) {
-		var encodedQuery = cond ? 'NQ' : '';
-		if (userQuery) {
-			encodedQuery += userQuery + '^';
-		}
-
-		encodedQuery += incAssignment;
-		current.addEncodedQuery(encodedQuery);
+		conds.push(incAssignment);
 	}
 
-	gs.info('MKR condition: ' + current.getEncodedQuery());
+	if (conds.length) {
+		current.addEncodedQuery(conds.join('^NQ'));
+	}
 
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
@@ -69,7 +64,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>6944813ec3d752103491db0d05013124</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>21</sys_mod_count>
         <sys_name>Task Poll ACLs  - Filter Incidents</sys_name>
         <sys_overrides/>
         <sys_package display_value="Task Poll - ACLs" source="5eac3cf6c39752103491db0d0501316f">5eac3cf6c39752103491db0d0501316f</sys_package>
@@ -78,7 +73,7 @@
         <sys_scope display_value="Task Poll - ACLs">5eac3cf6c39752103491db0d0501316f</sys_scope>
         <sys_update_name>sys_script_6944813ec3d752103491db0d05013124</sys_update_name>
         <sys_updated_by>markus.kraus</sys_updated_by>
-        <sys_updated_on>2025-02-12 19:24:22</sys_updated_on>
+        <sys_updated_on>2025-02-12 19:59:24</sys_updated_on>
         <template/>
         <when>before</when>
     </sys_script>
